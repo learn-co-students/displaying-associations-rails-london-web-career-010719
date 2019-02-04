@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  
+  
   def index
     @categories = Category.all
   end
@@ -25,4 +27,8 @@ class CategoriesController < ApplicationController
     category.update(params.require(:category))
     redirect_to category_path(category)
   end
+
+
+  private 
+
 end
